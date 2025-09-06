@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title>หน้าฟอร์ม | EJS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>หน้าฟอร์ม</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="/">หน้าหลัก</a></li>
+            <li><a href="/form">หน้าฟอร์ม</a></li>
+            <li><a href="/data">หน้าแสดงข้อมูล</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="form-container">
+        <form id="myform">
+          <div class="form-group">
+            <label for="name">ชื่อ:</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">อีเมล:</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+        </form>
+      </main>
+      <a href="/" class="back-link">กลับหน้าหลัก</a>
+    </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

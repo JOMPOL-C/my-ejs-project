@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <title><%= pagetitle %> | EJS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Sarabun:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>หน้าแสดงข้อมูล</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="/">หน้าหลัก</a></li>
+            <li><a href="/form">หน้าฟอร์ม</a></li>
+            <li><a href="/data">หน้าแสดงข้อมูล</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main-content">
+        <h2 class="text-center">ข้อมูลที่บันทึกไว้</h2>
+        <div id="data-container" class="data-container">
+            <% if (dataList.length > 0) {  dataList.forEach(data => { %>
+                <div class="data-card">
+                    <p><strong>ชื่อ:</strong> <%= data.name %></p>
+                    <p><strong>อีเมล:</strong> <%= data.email %></p>
+                    <p><strong>วันที่บันทึก:</strong> <%= data.date %></p>
+                </div>
+            <% }) } else { %>
+                <p> ยังไม่มีข้อมูล </p>
+            <% } %>
+        </div>
+      </main>
+      <a href="/" class="back-link">กลับหน้าหลัก</a>
+    </div>
+  </body>
+</html>
